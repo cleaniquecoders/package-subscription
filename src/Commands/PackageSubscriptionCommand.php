@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace CleaniqueCoders\PackageSubscription\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class PackageSubscriptionCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'package-subscription';
 
     public $description = 'My command';
 
