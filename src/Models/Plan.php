@@ -141,8 +141,9 @@ class Plan extends Model
 
     /**
      * Calculate the next billing date from a given date
+     * Returns null for LIFETIME billing period (never expires)
      */
-    public function calculateNextBillingDate(?Carbon $from = null): Carbon
+    public function calculateNextBillingDate(?Carbon $from = null): ?Carbon
     {
         $from = $from ?? now();
 

@@ -45,8 +45,9 @@ enum BillingPeriod: string
 
     /**
      * Add the billing period to a given date
+     * Returns null for LIFETIME billing period (never expires)
      */
-    public function addTo(Carbon $date, int $count = 1): Carbon
+    public function addTo(Carbon $date, int $count = 1): ?Carbon
     {
         return match ($this) {
             self::DAILY => $date->copy()->addDays($count),
@@ -54,7 +55,7 @@ enum BillingPeriod: string
             self::MONTHLY => $date->copy()->addMonths($count),
             self::QUARTERLY => $date->copy()->addMonths($count * 3),
             self::YEARLY => $date->copy()->addYears($count),
-            self::LIFETIME => $date->copy()->addYears(100), // Effectively never expires
+            self::LIFETIME => null, // Never expires
         };
     }
 
