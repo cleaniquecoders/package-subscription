@@ -1,6 +1,6 @@
 <?php
 
-namespace CleaniqueCoders\PackageSubscription\Traits;
+namespace CleaniqueCoders\PackageSubscription\Concerns;
 
 use CleaniqueCoders\PackageSubscription\Models\Plan;
 use CleaniqueCoders\PackageSubscription\Models\Subscription;

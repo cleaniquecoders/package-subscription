@@ -2,12 +2,14 @@
 
 namespace CleaniqueCoders\PackageSubscription\Models;
 
+use CleaniqueCoders\Traitify\Concerns\InteractsWithUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
+ * @property string $uuid
  * @property int $subscription_id
  * @property string $feature
  * @property float $used
@@ -20,7 +22,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class Usage extends Model
 {
-    use HasFactory;
+    use HasFactory, InteractsWithUuid;
 
     protected $fillable = [
         'subscription_id',

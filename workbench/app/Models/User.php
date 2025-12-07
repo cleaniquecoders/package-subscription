@@ -2,7 +2,7 @@
 
 namespace Workbench\App\Models;
 
-use CleaniqueCoders\PackageSubscription\Traits\HasSubscriptions;
+use CleaniqueCoders\PackageSubscription\Concerns\HasSubscriptions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 

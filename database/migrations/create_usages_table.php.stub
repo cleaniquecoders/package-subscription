@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('usages', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->foreignId('subscription_id')->constrained()->cascadeOnDelete();
             $table->string('feature');
             $table->decimal('used', 15, 4)->default(0);

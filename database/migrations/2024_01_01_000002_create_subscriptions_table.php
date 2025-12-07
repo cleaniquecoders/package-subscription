@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('subscriptions', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->morphs('subscribable');
             $table->foreignId('plan_id')->constrained()->cascadeOnDelete();
             $table->string('status')->default('active');

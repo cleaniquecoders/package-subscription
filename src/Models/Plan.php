@@ -4,6 +4,9 @@ namespace CleaniqueCoders\PackageSubscription\Models;
 
 use Carbon\Carbon;
 use CleaniqueCoders\PackageSubscription\Enums\BillingPeriod;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithMeta;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithSlug;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithUuid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -12,6 +15,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $id
+ * @property string $uuid
  * @property string $slug
  * @property string $name
  * @property string|null $description
@@ -30,7 +34,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Plan extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, InteractsWithMeta, InteractsWithSlug, InteractsWithUuid, SoftDeletes;
 
     protected $fillable = [
         'slug',

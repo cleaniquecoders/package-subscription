@@ -11,6 +11,8 @@ use CleaniqueCoders\PackageSubscription\Events\SubscriptionResumed;
 use CleaniqueCoders\PackageSubscription\Events\SubscriptionSuspended;
 use CleaniqueCoders\PackageSubscription\Services\ProrationService;
 use CleaniqueCoders\PackageSubscription\Services\UsageService;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithMeta;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithUuid;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -21,6 +23,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * @property int $id
+ * @property string $uuid
  * @property string $subscribable_type
  * @property int $subscribable_id
  * @property int $plan_id
@@ -43,7 +46,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Subscription extends Model
 {
-    use HasFactory, SoftDeletes;
+    use HasFactory, InteractsWithMeta, InteractsWithUuid, SoftDeletes;
 
     protected $fillable = [
         'subscribable_type',

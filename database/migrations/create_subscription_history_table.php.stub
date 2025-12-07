@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('subscription_history', function (Blueprint $table) {
             $table->id();
+            $table->uuid('uuid')->unique();
             $table->foreignId('subscription_id')->constrained()->cascadeOnDelete();
             $table->foreignId('from_plan_id')->nullable()->constrained('plans');
             $table->foreignId('to_plan_id')->nullable()->constrained('plans');

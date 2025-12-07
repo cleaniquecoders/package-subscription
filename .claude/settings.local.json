@@ -7,7 +7,8 @@
       "Bash(composer analyse:*)",
       "Bash(grep:*)",
       "Bash(composer format:*)",
-      "Bash(composer require:*)"
+      "Bash(composer require:*)",
+      "Bash(composer update:*)"
     ],
     "deny": [],
     "ask": []

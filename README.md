@@ -119,7 +119,7 @@ php artisan vendor:publish --tag="package-subscription-views"
 Add the `HasSubscriptions` trait to your User or Team model:
 
 ```php
-use CleaniqueCoders\PackageSubscription\Traits\HasSubscriptions;
+use CleaniqueCoders\PackageSubscription\Concerns\HasSubscriptions;
 
 class User extends Authenticatable
 {

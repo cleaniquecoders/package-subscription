@@ -2,12 +2,15 @@
 
 namespace CleaniqueCoders\PackageSubscription\Models;
 
+use CleaniqueCoders\Traitify\Concerns\InteractsWithMeta;
+use CleaniqueCoders\Traitify\Concerns\InteractsWithUuid;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * @property int $id
+ * @property string $uuid
  * @property int $subscription_id
  * @property int|null $from_plan_id
  * @property int|null $to_plan_id
@@ -22,7 +25,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
  */
 class SubscriptionHistory extends Model
 {
-    use HasFactory;
+    use HasFactory, InteractsWithMeta, InteractsWithUuid;
 
     protected $table = 'subscription_history';
 
