@@ -7,6 +7,15 @@
 
 A comprehensive Laravel package for managing subscription plans and subscriptions in SaaS applications. This package provides an easy-to-configure solution for implementing package-based subscription management, allowing you to create flexible pricing tiers, manage user subscriptions, track usage, and handle the complete subscription lifecycle.
 
+## Documentation
+
+For complete documentation, see the [docs](./docs/README.md) directory:
+
+- [Architecture](./docs/01-architecture/README.md) - System design and components
+- [Development](./docs/02-development/README.md) - Installation, configuration, and testing
+- [Usage](./docs/03-usage/README.md) - Plan management, subscriptions, and access control
+- [API Reference](./docs/04-api-reference/README.md) - Complete API documentation
+
 ## Features
 
 ### Plan Management
