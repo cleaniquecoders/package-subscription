@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(composer test:*)",
+      "Bash(composer dump-autoload:*)",
+      "Bash(composer analyse:*)",
+      "Bash(grep:*)",
+      "Bash(composer format:*)"
     ],
     "deny": [],
     "ask": []
