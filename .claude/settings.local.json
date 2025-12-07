@@ -6,7 +6,8 @@
       "Bash(composer dump-autoload:*)",
       "Bash(composer analyse:*)",
       "Bash(grep:*)",
-      "Bash(composer format:*)"
+      "Bash(composer format:*)",
+      "Bash(composer require:*)"
     ],
     "deny": [],
     "ask": []
